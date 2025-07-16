@@ -4,7 +4,11 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors({ origin: 'https://flow-sweepstakes.vercel.app/' }));
+app.use(cors({
+  origin: [// or your local dev port
+    'https://flow-sweepstakes.vercel.app'
+  ]
+}));
 
 const sheetId = process.env.GOOGLE_SHEET_ID;
 
