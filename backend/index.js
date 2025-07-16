@@ -17,7 +17,7 @@ if (process.env.GOOGLE_SERVICE_ACCOUNT_JSON) {
   throw new Error('No Google service account credentials provided!');
 }
 
-// **THIS IS THE IMPORTANT PART**
+// Google Sheets Auth
 const auth = new google.auth.GoogleAuth({
   credentials: serviceAccount,
   scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
@@ -31,9 +31,15 @@ app.get('/api/sweepstakes', async (req, res) => {
     const response = await sheets.spreadsheets.values.get({
       auth: client,
       spreadsheetId: sheetId,
-      range: 'Sheet1', // or your actual range
+      range: 'Entries', // or your actual range
     });
-    res.json(response.data.values);
+    // Remove the header row if present
+    const rows = response.data.values || [];
+    // If the first row is a header, remove it
+    if (rows.length > 0 && rows[0][0] === 'HolderAddress') {
+      rows.shift();
+    }
+    res.json(rows);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
