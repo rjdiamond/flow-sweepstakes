@@ -70,7 +70,7 @@ function App() {
   const countdown = useCountdown(SWEEPSTAKES_END);
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/sweepstakes')
+    fetch('https://flow-sweepstakes-backend.onrender.com/')
       .then((res) => res.json())
       .then((rows) => {
         // rows is an array of arrays: [[address, tokenId, quantity], ...]
