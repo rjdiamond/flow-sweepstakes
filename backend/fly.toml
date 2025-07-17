@@ -17,6 +17,6 @@ memory_mb = 1_024
 
 [[http_service.checks]]
 grace_period = 10
-interval = 30s
-method =GET
+interval = "30s"
+method = "GET"
 timeout = "5  path =/api/sweepstakes
