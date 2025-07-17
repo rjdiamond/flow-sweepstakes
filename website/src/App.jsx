@@ -46,20 +46,21 @@ function App() {
     if (loading) {
       setLoadingStep(0);
       setMinLoading(true);
-      const steps = [
-        'Loading sweepstakes...',
-        'Loading entries...',
-        'Almost there...'
-      ];
-      let i = 0;
-      const interval = setInterval(() => {
-        i = (i + 1) % steps.length;
-        setLoadingStep(i);
-      }, 900);
-      // Minimum loading time
-      const minTimer = setTimeout(() => setMinLoading(false), 3500);
+      
+      // Step timing: 3s, 3s, 10s =16econds total
+      const step2Timer = setTimeout(() => {
+        setLoadingStep(1);
+      }, 3000); // First step:3conds
+      
+      const step3Timer = setTimeout(() => {
+        setLoadingStep(2);
+      }, 6000); // Second step: 3s + 3s =6conds
+      
+      // Minimum loading time (16conds total)
+      const minTimer = setTimeout(() => setMinLoading(false), 16000);
       return () => {
-        clearInterval(interval);
+        clearTimeout(step2Timer);
+        clearTimeout(step3Timer);
         clearTimeout(minTimer);
       };
     } else {
