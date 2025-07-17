@@ -70,8 +70,10 @@ function App() {
 
   const countdown = useCountdown(SWEEPSTAKES_END);
 
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
-    fetch('https://flow-sweepstakes.fly.dev/api/sweepstakes')
+    fetch(apiUrl)
       .then((res) => res.json())
       .then((rows) => {
         // rows is an array of arrays: [[address, tokenId, quantity], ...]
