@@ -1,3 +1,9 @@
+
+# fly.toml app configuration file generated for flow-sweepstakes on 2025-07-17T00:40:18Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = "flow-sweepstakes"
 primary_region = "sea"
 
@@ -21,3 +27,4 @@ interval = "30s"
 method = "GET"
 timeout = "5s"
 path = "/api/sweepstakes"
+
