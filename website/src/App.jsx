@@ -180,6 +180,10 @@ function App() {
               : `${String(countdown.d).padStart(2, '0')}d ${String(countdown.h).padStart(2, '0')}h ${String(countdown.m).padStart(2, '0')}m ${String(countdown.s).padStart(2, '0')}s`}
           </div>
         </div>
+        <div>
+          <div style={{ color: '#BFFFE6', fontSize: '1.1rem', letterSpacing: '0.5px' }}>Winner</div>
+          <div style={{ color: '#00EF8B', fontSize: '1.8rem', fontWeight: 600, fontFamily: 'monospace' }}>0x000000000000000000000002fD78E392f83267e7</div>
+        </div>
       </div>
       {loading || minLoading ? (
         <div style={{
