@@ -159,7 +159,7 @@ function App() {
           )}
         </span>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', marginTop: '2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1.8rem', marginTop: '2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
         <div>
           <div style={{ color: '#BFFFE6', fontSize: '1.1rem', letterSpacing: '0.5px' }}>Total Entries</div>
           <div style={{ color: '#00EF8B', fontSize: '2.2rem', fontWeight: 600 }}>{formatNumber(totalEntries)}</div>
