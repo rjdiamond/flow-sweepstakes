@@ -7,10 +7,10 @@ function formatNumber(num) {
 }
 
 const SWEEPSTAKES_DESCRIPTION =
-  "Turn digital history into a centerpiece. This CryptoSlab showcases Caitlin Clark’s WNBA Top Shot rookie moment — her official debut from May 14, 2024 — in a stunning physical display. Limited to just 1,250 minted, it’s a rare and iconic collectible for any true fan.\nYou’ll receive both the physical CryptoSlab and the official Top Shot moment — ready to display, flex, and own forever.\nEnter now for a shot at owning this landmark moment in basketball history.";
+  "Level up your adventure with the all-new Nintendo Switch 2, bundled with Super Mario World. Experience next-gen performance, a vivid OLED display, and lightning-fast load times—all while helping Mario stomp, jump, and power-up through a reimagined Mushroom Kingdom. **What’s Included:** • Nintendo Switch 2 Console (128GB) • Super Mario World (Digital Download) • Enhanced Joy-Con Controllers • Charging Dock + HDMI Cable";
 
 // Set your sweepstakes end date/time here (PDT)
-const SWEEPSTAKES_END = new Date('2025-07-17T22:00:00-07:00'); // July 18, 2025, 10:00:00 PM PDT
+const SWEEPSTAKES_END = new Date('2025-08-01T22:00:00-06:59'); // August 1st, 2025, 10:00:00 PM PDT
 
 function useCountdown(endTime) {
   const [timeLeft, setTimeLeft] = useState(endTime - Date.now());
@@ -113,16 +113,16 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 style={{ color: '#00EF8B' }}>Flow Rewards Sweepstakes #11</h1>
+      <h1 style={{ color: '#00EF8B' }}>Flow Rewards Sweepstakes #12</h1>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', marginBottom: '0.5rem', marginTop: '.5rem' }}>
         <a
           className="subtitle"
-          href="https://store.flow.com/minting/contracts/4726f599-2383-48c8-b368-9ae55d5f2724/sweepstakes/373e9b19-db45-4b6d-ad71-861a61cc7a67"
+          href="https://store.flow.com/minting/contracts/4726f599-2383-48c8-b368-9ae55d5f2724/sweepstakes/4ade3e93-5e52-4b86-a10b-be55500158fb"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: '#BFFFE6', textDecoration: 'underline', fontSize: '1.1rem', display: 'inline-block', marginBottom: 0 }}
         >
-          Caitlin Clark Debut Moment & CryptoSlab
+          Nintendo Switch™ 2 + Mario Kart™ World Bundle
         </a>
         <span
           style={{ color: '#BFFFE6', fontSize: '1rem', cursor: 'pointer', position: 'relative', marginTop: 0 }}
@@ -179,10 +179,6 @@ function App() {
               ? 'Ended'
               : `${String(countdown.d).padStart(2, '0')}d ${String(countdown.h).padStart(2, '0')}h ${String(countdown.m).padStart(2, '0')}m ${String(countdown.s).padStart(2, '0')}s`}
           </div>
-        </div>
-        <div>
-          <div style={{ color: '#BFFFE6', fontSize: '1.1rem', letterSpacing: '0.5px' }}>Winner</div>
-          <div style={{ color: '#00EF8B', fontSize: '1.8rem', fontWeight: 600, fontFamily: 'monospace' }}>0x000000000000000000000002fD78E392f83267e7</div>
         </div>
       </div>
       {loading || minLoading ? (
