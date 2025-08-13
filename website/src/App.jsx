@@ -7,10 +7,10 @@ function formatNumber(num) {
 }
 
 const SWEEPSTAKES_DESCRIPTION =
-  "Level up your adventure with the all-new Nintendo Switch 2, bundled with Super Mario World. Experience next-gen performance, a vivid OLED display, and lightning-fast load times—all while helping Mario stomp, jump, and power-up through a reimagined Mushroom Kingdom. **What’s Included:** • Nintendo Switch 2 Console (128GB) • Super Mario World (Digital Download) • Enhanced Joy-Con Controllers • Charging Dock + HDMI Cable";
+  "Despite the opposing Kansas City defense putting together a great gameplan to slow down his usual method of production on the ground, superstar Eagles running back Saquon Barkley was always going to find other ways to make an impact for the Philly offense. On this play, Barkley showed off his abilities as a downfield receiver, twisting and falling to make this ridiculous juggling grab down the sideline for a gain of 22 yards that set the Eagles up in a goal-to-go situation. Barkley would finish this one with 97 yards of total offense, with 57 hard-fought yards coming on the ground and 40 more coming through the air on six catches, as the Eagles defeated the Chiefs, 40-22, in Super Bowl LIX on Feb. 9, 2025, to win their second-ever title.";
 
 // Set your sweepstakes end date/time here (PDT)
-const SWEEPSTAKES_END = new Date('2025-08-01T22:00:00-06:59'); // August 1st, 2025, 10:00:00 PM PDT
+const SWEEPSTAKES_END = new Date('2025-08-22T22:00:00-06:59'); // August 22nd, 2025, 10:00:00 PM PDT
 
 function useCountdown(endTime) {
   const [timeLeft, setTimeLeft] = useState(endTime - Date.now());
@@ -113,16 +113,16 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 style={{ color: '#00EF8B' }}>Flow Rewards Sweepstakes #12</h1>
+      <h1 style={{ color: '#00EF8B' }}>Flow Rewards Sweepstakes #13</h1>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', marginBottom: '0.5rem', marginTop: '.5rem' }}>
         <a
           className="subtitle"
-          href="https://store.flow.com/minting/contracts/4726f599-2383-48c8-b368-9ae55d5f2724/sweepstakes/4ade3e93-5e52-4b86-a10b-be55500158fb"
+          href="https://store.flow.com/minting/contracts/4726f599-2383-48c8-b368-9ae55d5f2724/sweepstakes/5b5fd58c-2f0e-4fa2-84e3-f9c694d0d7b8"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: '#BFFFE6', textDecoration: 'underline', fontSize: '1.1rem', display: 'inline-block', marginBottom: 0 }}
         >
-          Nintendo Switch™ 2 + Mario Kart™ World Bundle
+          Saquon Barkley Moment + CryptoSlab
         </a>
         <span
           style={{ color: '#BFFFE6', fontSize: '1rem', cursor: 'pointer', position: 'relative', marginTop: 0 }}
