@@ -7,10 +7,10 @@ function formatNumber(num) {
 }
 
 const SWEEPSTAKES_DESCRIPTION =
- "Enter for your chance to win a $500 Disney Gift Card eGift—the perfect way to add a little Disney Magic to your life. Redeemable at DisneyStore.com, Disney Store locations, Walt Disney World Resort, Disneyland Resort, and more. ⚠️ Prize Eligibility: The Disney Gift Card can only be awarded to U.S. residents. If the winner resides outside of the U.S., they will instead receive the USDF (Flow stablecoin) equivalent of $500.";
+ "Enter for a chance to win an authentic 1997 Japanese Jungle Pikachu card, a fan-favorite from one of the earliest Pokémon sets, plus $50 in USDF. This card is vaulted via Beezie, a platform that secures, tokenizes, and manages high-value collectibles. The winner may choose to receive the NFT tokenized version (secured by Beezie) or claim the physical card, shipped directly to them.";
 
 // Set your sweepstakes end date/time here (PDT)
-const SWEEPSTAKES_END = new Date('2025-09-13T22:00:00-06:59'); // August 22nd, 2025, 10:00:00 PM PDT
+const SWEEPSTAKES_END = new Date('2025-09-19T22:00:00-06:59'); // August 22nd, 2025, 10:00:00 PM PDT
 
 function useCountdown(endTime) {
   const [timeLeft, setTimeLeft] = useState(endTime - Date.now());
@@ -117,12 +117,12 @@ function App() {
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', marginBottom: '0.5rem', marginTop: '.5rem' }}>
         <a
           className="subtitle"
-          href="https://store.flow.com/minting/contracts/4726f599-2383-48c8-b368-9ae55d5f2724/sweepstakes/faa18afc-2193-47cc-9a2f-fb11af432bd4"
+          href="https://store.flow.com/minting/contracts/4726f599-2383-48c8-b368-9ae55d5f2724/sweepstakes/ad1fd1f4-350b-405d-ba14-ed803a7c26d7"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: '#BFFFE6', textDecoration: 'underline', fontSize: '1.1rem', display: 'inline-block', marginBottom: 0 }}
         >
-          $500 Disney Gift Card
+          Japanese Jungle Pikachu + $50 USDF
         </a>
         <span
           style={{ color: '#BFFFE6', fontSize: '1rem', cursor: 'pointer', position: 'relative', marginTop: 0 }}
@@ -223,24 +223,12 @@ function App() {
         <p style={{ color: 'red' }}>{error}</p>
       ) : (
         <>
-          <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-            <ResponsiveContainer width="95%" height={600}>
-              <BarChart data={data} margin={{ top: 30, right: 30, left: 0, bottom: 5 }}>
-                <CartesianGrid stroke="#BFFFE6" strokeDasharray="3 3" />
-                <XAxis dataKey={d => '0x..' + d.wallet.slice(-4)} tick={{ fontSize: 14, fill: '#00976C' }} />
-                <YAxis tick={{ fontSize: 14, fill: '#00976C' }} domain={[0, yMax]} tickCount={8} />
-                <Tooltip contentStyle={{ background: '#fff', borderColor: '#00EF8B', color: '#00976C' }} cursor={{ fill: '#BFFFE6' }} />
-                <Legend wrapperStyle={{ color: '#00976C' }} />
-                <Bar dataKey="tickets" name=" Tickets" fill="#00EF8B" radius={[8, 8, 0, 0]} barSize={60} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
           <div style={{ marginTop: '2.5rem' }}>
             <h2 style={{ color: '#BFFFE6', fontSize: '1.3rem', marginBottom: '1rem', fontWeight: 500 }}>All Entries</h2>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <div style={{ width: '90%', minWidth: 320, maxWidth: 1200 }}>
                 <div style={{ overflowX: 'auto' }}>
-                  <div style={{ maxHeight: '210px', overflowY: 'auto', borderRadius: '10px', border: '1px solid #222' }}>
+                  <div style={{ maxHeight: '800px', overflowY: 'auto', borderRadius: '10px', border: '1px solid #222' }}>
                     <table style={{ width: '100%', borderCollapse: 'collapse', background: 'rgba(16,20,26,0.95)' }}>
                       <thead>
                         <tr>
